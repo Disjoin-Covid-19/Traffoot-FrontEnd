@@ -1,0 +1,156 @@
+body {
+  overflow: hidden;
+}
+
+.container1 {
+  background-image: url("../../assets/back_Black.png");
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.container2 {
+  display: none;
+  text-align: center;
+}
+
+.container {
+  color: white;
+  /* display: inline; */
+}
+.changecolour {
+  color: white;
+}
+
+.cont2storeAlign {
+  margin-top: -25px;
+  margin-right: 45px;
+}
+
+.cont2integrationAlign {
+  margin-top: -25px;
+  margin-left: 250px;
+}
+
+.storeAlign {
+  margin-top: -25px;
+  margin-left: 100px;
+}
+.integrationAlign {
+  margin-top: -25px;
+  margin-left: 240px;
+}
+
+.createAccountAlign {
+  margin-left: 90px;
+  margin-top: -23px;
+}
+
+.cont2Navbar {
+  background-color: black;
+}
+
+.iconColor {
+  color: white;
+}
+
+.listViewIcon {
+  margin-right: 290px;
+}
+
+.mapViewIcon {
+  margin-left: 290px;
+}
+
+.scrollButton {
+  padding-top: 50px;
+}
+
+.mapView {
+  padding-left: 300px !important;
+}
+
+.listView {
+  padding-right: 300px !important;
+}
+
+#cont2iconColor {
+  color: black;
+}
+
+#btnWhite {
+  border: 2px solid white;
+  color: white;
+  margin-right: 20px;
+}
+
+.btn1 {
+  background-color: transparent;
+  border: 2px solid red;
+}
+
+#x36 {
+  margin-top: -7%;
+  margin-left: 36%;
+}
+
+#queueImg {
+  width: 65%;
+}
+
+.fullRow {
+  width: 100%;
+  /* padding-top: 10px; */
+}
+
+#navbarLink {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  text-align: center;
+  /* display: inline; */
+}
+
+#heading {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 60px;
+}
+
+#container {
+  text-align: center;
+  padding-top: 108px;
+}
+
+#createAccountLink {
+  color: red;
+  margin-top: -6px;
+}
+
+.createAccountButton {
+  color: red;
+  margin-top: -6px;
+  width: 130px;
+  background-color: transparent;
+  border: 2px solid red;
+}
+
+#signupDiv {
+  padding-top: 20px;
+}
+
+#navRow {
+  background-color: black;
+}
+
+#cont2Heading {
+  color: #ff0000;
+  font-size: 20px;
+  text-align: left;
+}
+
+#cont2Para {
+  text-align: left;
+}
+
+.common {
+  padding-top: 3%;
+}
