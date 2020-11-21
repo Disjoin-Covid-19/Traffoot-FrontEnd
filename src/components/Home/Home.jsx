@@ -9,6 +9,7 @@ import icons from "glyphicons";
 import { Redirect } from "react-router-dom";
 import Signup from "../Signup/Signup";
 import NavBar from "../../common/NavBar";
+import * as faIcons from "react-icons/si";
 
 class Home extends Component {
   state = {};
@@ -89,6 +90,7 @@ class Home extends Component {
                       aria-label="Left Align"
                       onClick={this.redirectToMap}
                     >
+                      {/* <faIcons.SiGooglemaps /> */}
                       <span
                         className={`glyphicon glyphicon-map-marker`}
                         aria-hidden="true"

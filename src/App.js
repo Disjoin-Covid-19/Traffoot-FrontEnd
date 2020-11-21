@@ -31,6 +31,7 @@ function App() {
         <Switch>
           <Route path="/Home" component={Home} />
           <Route path="/Map" component={Map} />
+          <Route path="/Mapview" component={MapView} />
           <Route path="/List" component={ListView} />
           <Route path="/CreateAccount" component={Signup} />
           <Route path="/nav" component={NavBar} />
