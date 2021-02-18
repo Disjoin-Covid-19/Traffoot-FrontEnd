@@ -9,10 +9,11 @@ Repository name: TRAFFOOT-FRONTEND
 - cp .env.example .env
 - npm install
 - npm start
+- after making changes to the code base, create a pull request for your branch to master
 
 ## Key resources
 UI images: https://xd.adobe.com/view/9599d657-dce6-4072-b4e1-c4be1f044b0d-c0ca/screen/aabb58ee-25f5-473f-827a-b97e41de7f8c/
-API specification: 
+API specification: https://sample-disjoin1.herokuapp.com/api/geofence_stores - Gurpreet to provide detail on post paramaters
 
 
 
