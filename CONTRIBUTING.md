@@ -14,9 +14,47 @@ Repository name: TRAFFOOT-FRONTEND
 ## Key resources
 Slide deck for pitch with images: https://xd.adobe.com/view/9599d657-dce6-4072-b4e1-c4be1f044b0d-c0ca/screen/aabb58ee-25f5-473f-827a-b97e41de7f8c/
 Slide deck for new developers joining: https://docs.google.com/presentation/d/1XSUNdBJYgusXWB1LZbINliOT-b5e_ovwDinXuCtMMkg/edit#slide=id.p15
-API specification: https://sample-disjoin1.herokuapp.com/api/geofence_stores - Gurpreet to provide detail on post paramaters
-
-
-
-
+API specification: 
+* BASE URL: https://sample-disjoin1.herokuapp.com/api/
+* ENDPOINTS: 
+1. geofence_stores:
+- GET: 
+  {
+    "center": [lat, lng],
+    "radius": number
+  }
+2. userLogin:
+- POST:
+  {
+    "email": string,
+    "password": string
+  }
+3. users:
+- POST:
+  {
+    "id":  number,
+    "first_name": string,
+    "last_name": string,
+    "email": string,
+    "password": string,
+    "address": string
+  }
+- DELETE:
+  {
+    "id": string
+  }
+4. Stores:
+- POST:
+  {
+    "sid": number,
+    "sName": string,
+    "username": string,
+    "password": string,
+    "streetName": string,
+    "city": string,
+    "state": string,
+    "zipcode": string,
+    "timestampUTC": string,
+    "isActive": true
+  }
 
