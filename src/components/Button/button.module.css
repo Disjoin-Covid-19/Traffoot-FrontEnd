@@ -1,7 +1,32 @@
 .button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: var(--font-size-norm);
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
 
+.large {
+    padding: 12px 20px;
+    font-size: var(--font-size-md);
+    font-weight: 500;
+}
+
+.black {
+    background: var(--traffoot-black);
+    color: var(--traffoot-white);
+    border: solid var(--traffoot-white) 1px;
+}
+
+.blank {
+    padding: 0;
+    padding: unset;
+    border-radius: unset;
+    background: inherit;
 }
 
 .primary {
-    background: var(--traffoot-primary-red)
+    background: var(--traffoot-primary-red);
+    color: #fff;
 }

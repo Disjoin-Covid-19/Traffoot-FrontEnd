@@ -10,7 +10,7 @@ const PRIVATE_TYPE_ROUTE = 'private';
 
 const routes = [
     { path: '/', component: Home, exact: true, type: PUBLIC_TYPE_ROUTE },
-    { path: '/map', component: Map, exact: true, type: PRIVATE_TYPE_ROUTE },
+    { path: '/map', component: Home, exact: true, type: PRIVATE_TYPE_ROUTE },
 ];
 
 function App() {

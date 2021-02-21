@@ -2,6 +2,7 @@ import React from 'react';
 import style from './homeheader.module.css';
 import logoImage from '../../../assets/image-product-logo.png';
 import { Link } from 'react-router-dom';
+import Button from 'components/Button';
 
 const HomeHeader = () => {
 
@@ -20,7 +21,8 @@ const HomeHeader = () => {
                 </Link>
             </nav>
             <div className="accountControls">
-                
+                <Button className={style.loginButton} styling="blank">Log in</Button>
+                <Button styling="primary">Create Account</Button>
             </div>
         </header>
     )

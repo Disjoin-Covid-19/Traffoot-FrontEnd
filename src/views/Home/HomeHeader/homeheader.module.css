@@ -3,11 +3,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 3rem 5rem;
-    background-image: url("../../../assets/image-background-home.png");
+    background-image: url("assets/image-background-home.png");
     background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 7vh;
     width: 100vw;
     color: white;
@@ -16,6 +13,14 @@
 .nav a {
     font-size: var(--font-size-md);
     color: var(--traffoot-white);
-    padding-right: 2em;
     text-decoration: none;
+}
+
+.nav a:not(:first-child) {
+    margin-left: 2rem;
+}
+
+.loginButton {
+    color: var(--traffot-white);
+    margin-right: 2rem;
 }
