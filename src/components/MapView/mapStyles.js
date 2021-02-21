@@ -1,4 +1,4 @@
-let styles = [
+const styles = [
   {
     featureType: "all",
     elementType: "geometry.fill",
@@ -169,4 +169,4 @@ let styles = [
   },
 ];
 
-export default { styles };
+export default styles ;

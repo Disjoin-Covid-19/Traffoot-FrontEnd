@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {
   withGoogleMap,
-  withScriptjs,
   GoogleMap,
   InfoWindow,
   Marker,

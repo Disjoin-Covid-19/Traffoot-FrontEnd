@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import styles from "./ListView.module.css";
-
 class ListView extends Component {
   state = {};
   render() {
