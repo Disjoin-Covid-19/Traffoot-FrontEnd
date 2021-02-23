@@ -2,7 +2,8 @@ import React from 'react';
 import HomeHeader from './HomeHeader';
 import style from './home.module.css';
 import Button from 'components/Button';
-const Home = () => {
+
+const Home : React.FC<{}> = () => {
 
     return (
         <main className={style.main}>

@@ -10,10 +10,21 @@
     color: white;
 }
 
+@media (max-width: 480px) {
+    /* do some mobile stuff, maybe a sidebar */
+    .header {
+        background: unset;
+    }
+}
+
 .nav a {
     font-size: var(--font-size-md);
     color: var(--traffoot-white);
     text-decoration: none;
+}
+
+.nav a:hover {
+    color: #fff;
 }
 
 .nav a:not(:first-child) {

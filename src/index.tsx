@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import 'typeface-poppins'
+import 'typeface-poppins';
+import 'typeface-montserrat';
 import 'normalize.css';
 
 import "./index.css";
