@@ -39,7 +39,8 @@ API specification:
         "last_name": string,
         "email": string,
         "password": string,
-        "address": string
+        "address": string,
+        "addedDate": 1614260197.462485
       }
     
     - DELETE:
