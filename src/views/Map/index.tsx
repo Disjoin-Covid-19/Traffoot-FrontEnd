@@ -5,19 +5,13 @@ import MapSideBar from './MapSidebar';
 
 import 'leaflet/dist/leaflet.css'
 
-import { MapContainer, MapConsumer } from 'react-leaflet'
+import { MapContainer } from 'react-leaflet'
 import MapInner from './MapInner';
-import { useMapContext } from './map.hooks';
-
 interface Props {
 
 }
 
 const Map: React.FC<Props> = () => {
-
-    const c = useMapContext();
-
-    
 
     return (
         <MapProvider>

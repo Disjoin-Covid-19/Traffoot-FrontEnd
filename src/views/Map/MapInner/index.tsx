@@ -8,29 +8,24 @@ interface Props { }
 const MapInner: React.FC<Props> = (props) => {
 
     const map = useMap();
-    const { centre, rangeInMiles } = useMapContext();
+    const { center, rangeInMiles } = useMapContext();
 
     useEffect(() => {
-        if (centre) {
-            map.panTo(centre);
+        if (center) {
+            map.panTo(center);
             map.setZoom(12)
         }
-    }, [map, centre]);
+    }, [map, center]);
 
-    useEffect(() => {
-        if (rangeInMiles) {
-
-        }
-    }, [map, rangeInMiles])
     return (
         <>
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             />
-            {centre && (
+            {center && (
                 <Circle
-                    center={{ lat: centre[0], lng: centre[1] }}
+                    center={{ lat: center[0], lng: center[1] }}
                     fillColor="#d5d5d4"
                     opacity={0} // for the line around
                     fillOpacity={0.4}

@@ -7,7 +7,6 @@ import { Route } from 'react-router-dom';
 import PrivateRoute from "./components/PrivateRoute";
 
 const PUBLIC_TYPE_ROUTE = 'public';
-const PRIVATE_TYPE_ROUTE = 'private';
 
 const routes = [
     { path: '/', component: Home, exact: true, type: PUBLIC_TYPE_ROUTE },

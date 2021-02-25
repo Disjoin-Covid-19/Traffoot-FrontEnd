@@ -1,20 +1,19 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState } from 'react';
 import MapContext from './map.context';
 
-interface Props {}
+interface Props { }
 
-const MapProvider: React.FC<Props> = ({ children }) => {    
+const MapProvider: React.FC<Props> = ({ children }) => {
     const [rangeInMiles, setRangeInMiles] = useState(5);
     const [location, setLocation] = useState("");
-
-    const [centre, setCentre] = useState<[number, number] | undefined>(undefined);
+    const [center, setCenter] = useState<[number, number] | undefined>(undefined);
 
     return (
         <MapContext.Provider value={{
-            centre,
+            center,
             location,
             rangeInMiles,
-            setCentre,
+            setCenter,
             setLocation,
             setRangeInMiles
         }}>

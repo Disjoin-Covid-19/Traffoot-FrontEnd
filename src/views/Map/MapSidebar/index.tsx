@@ -3,7 +3,6 @@ import style from './mapsidebar.module.css';
 import productLogo from 'assets/image-product-logo.png';
 import Input from 'components/Input';
 import { useMapContext } from '../map.hooks';
-import Button from 'components/Button';
 import LocationPicker from 'components/LocationPicker';
 
 interface Props { }
@@ -15,7 +14,7 @@ const MapSideBar: React.FC<Props> = (props) => {
         setLocation,
         rangeInMiles,
         setRangeInMiles,
-        setCentre
+        setCenter
     } = useMapContext();
 
     return (
@@ -37,7 +36,7 @@ const MapSideBar: React.FC<Props> = (props) => {
                     <LocationPicker
                         locationSearch={location}
                         setLocationSearch={setLocation}
-                        onSelect={(p) => setCentre([Number(p.lat), Number(p.lon)])}
+                        onSelect={(p) => setCenter([Number(p.lat), Number(p.lon)])}
                     />
                 </div>
 
