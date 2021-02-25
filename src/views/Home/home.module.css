@@ -1,0 +1,30 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    background-image: url("assets/image-background-home.png");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    color: var(--traffoot-white);
+}
+
+.content {
+    text-align: center;
+    margin: auto;
+}
+
+.slogan {
+    font-size: var(--font-size-xlg);
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.description {
+    line-height: 2rem;
+    margin: 0;
+}
+
+.signUpButton {
+    margin-top: 3rem;
+    margin-right: 16px;
+}

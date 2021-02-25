@@ -1,24 +1,22 @@
 {
-  "name": "disjoin-demo",
+  "name": "traffoot-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "@types/googlemaps": "^3.40.3",
-    "bootstrap": "^4.5.3",
-    "glyphicons": "^0.2.0",
-    "google-maps-react": "^2.0.6",
-    "jquery": "^3.5.1",
-    "popper.js": "^1.16.1",
+    "axios": "^0.21.1",
+    "classnames": "^2.2.6",
+    "leaflet": "^1.7.1",
+    "normalize.css": "^8.0.1",
     "react": "^17.0.1",
-    "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
-    "react-google-maps": "^9.4.5",
-    "react-icons": "^3.11.0",
+    "react-leaflet": "^3.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "typeface-montserrat": "^1.1.13",
+    "typeface-poppins": "^1.1.13",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -46,6 +44,13 @@
     ]
   },
   "devDependencies": {
-    "@types/jquery": "^3.5.4"
+    "@types/classnames": "^2.2.11",
+    "@types/jest": "^26.0.20",
+    "@types/leaflet": "^1.5.23",
+    "@types/node": "^14.14.31",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "@types/react-router-dom": "^5.1.7",
+    "typescript": "4.0.5"
   }
 }
