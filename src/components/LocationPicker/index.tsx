@@ -16,12 +16,12 @@ const LocationPicker: React.FC<Props> = ({ locationSearch, setLocationSearch, on
 
     useEffect(() => {
         findLocations(locationSearch);
-    }, [locationSearch]);
+    }, [findLocations, locationSearch]);
 
     const onSelectPlace = useCallback((p : IOSMSearchPlace) => {
         onSelect(p);
         clearPlaces();
-    }, [])
+    }, [onSelect, clearPlaces])
 
     return (
         <div className={style.wrapper}>
