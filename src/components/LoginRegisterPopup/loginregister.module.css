@@ -1,0 +1,43 @@
+.container {
+    position: relative;
+}
+
+.popup {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: .5rem;
+    right: .5rem;
+    top: 3rem;
+}
+
+.buttons {
+    display: flex;
+    padding: .5rem 0;
+    margin-bottom: .5rem;
+    border-bottom: #707070 solid 1px;
+}
+
+.buttons > button {
+    flex-basis: 50%;
+    text-align: center;
+    color: #707070;
+    font-weight: 600;
+}
+
+.buttons > button:last-child {
+    border-left: #707070 solid 1px;
+
+}
+
+.buttons > button:hover {
+    color: var(--foottrack-primary-red);
+}
+
+
+/* SHARED FORM CSS */
+
+.form {
+
+}

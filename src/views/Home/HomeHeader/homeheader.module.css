@@ -10,6 +10,10 @@
     color: white;
 }
 
+.accountControls {
+    display: flex;
+}
+
 @media (max-width: 480px) {
     /* do some mobile stuff, maybe a sidebar */
     .header {
@@ -19,7 +23,7 @@
 
 .nav a {
     font-size: var(--font-size-md);
-    color: var(--traffoot-white);
+    color: var(--foottrack-white);
     text-decoration: none;
 }
 
