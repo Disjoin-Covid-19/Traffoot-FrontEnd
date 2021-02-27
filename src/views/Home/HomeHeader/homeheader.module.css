@@ -12,6 +12,7 @@
 
 .accountControls {
     display: flex;
+    align-items: center;
 }
 
 @media (max-width: 480px) {
@@ -35,7 +36,13 @@
     margin-left: 2rem;
 }
 
-.loginButton {
+.aboutUs {
     color: var(--traffot-white);
+    text-decoration: none;
     margin-right: 2rem;
 }
+
+.aboutUs:hover {
+    text-decoration: underline;
+}
+

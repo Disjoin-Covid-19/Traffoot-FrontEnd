@@ -2,8 +2,10 @@ import React from 'react';
 import HomeHeader from './HomeHeader';
 import style from './home.module.css';
 import Button from 'components/Button';
+import { useAuth } from 'contexts/Auth/auth.hooks';
 
 const Home : React.FC<{}> = () => {
+    const { username } = useAuth();
 
     return (
         <main className={style.main}>
@@ -20,8 +22,8 @@ const Home : React.FC<{}> = () => {
                     <br/>
                     <span>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores</span>
                 </p>
-                <div>
-                    <Button className={style.signUpButton} large styling="black"> Sign Up </Button>
+                <div className={style.buttons}>
+                    {!username && <Button className={style.signUpButton} large styling="black"> Sign Up </Button>}
                     <Button large styling="primary"> Find Store </Button>
                 </div>
             </div>

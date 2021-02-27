@@ -25,6 +25,9 @@
 }
 
 .signUpButton {
-    margin-top: 3rem;
     margin-right: 16px;
+}
+
+.buttons {
+    margin-top: 3rem;
 }
