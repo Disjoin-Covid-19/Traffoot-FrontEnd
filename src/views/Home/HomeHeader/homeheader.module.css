@@ -10,6 +10,11 @@
     color: white;
 }
 
+.accountControls {
+    display: flex;
+    align-items: center;
+}
+
 @media (max-width: 480px) {
     /* do some mobile stuff, maybe a sidebar */
     .header {
@@ -19,7 +24,7 @@
 
 .nav a {
     font-size: var(--font-size-md);
-    color: var(--traffoot-white);
+    color: var(--foottrack-white);
     text-decoration: none;
 }
 
@@ -31,7 +36,13 @@
     margin-left: 2rem;
 }
 
-.loginButton {
+.aboutUs {
     color: var(--traffot-white);
+    text-decoration: none;
     margin-right: 2rem;
 }
+
+.aboutUs:hover {
+    text-decoration: underline;
+}
+

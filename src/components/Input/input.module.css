@@ -1,8 +1,8 @@
 .input[type="text"] {
-    border: solid 1px var(--traffoot-grey);
+    border: solid 1px var(--foottrack-grey);
     border-radius: 5px;
     padding: 8px 16px;
-    background-color: var(--traffoot-light-grey);
+    background-color: var(--foottrack-light-grey);
     height: 2rem;
 }
 
@@ -19,7 +19,7 @@ input[type=range]::-webkit-slider-thumb {
     width: 1rem;
     border-radius: 15px;
     
-    background: var(--traffoot-primary-red);
+    background: var(--foottrack-primary-red);
     
 }
 
@@ -27,6 +27,6 @@ input[type=range]::-webkit-slider-runnable-track {
     -webkit-appearance: none;
 
     cursor: pointer;
-    background: var(--traffoot-primary-red);
+    background: var(--foottrack-primary-red);
     height:4px;
   }

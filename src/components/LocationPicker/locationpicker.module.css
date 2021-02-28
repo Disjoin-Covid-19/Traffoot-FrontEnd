@@ -6,7 +6,7 @@
     background: #fff;
     list-style: none;
     position: absolute;
-    border: solid 1px var(--traffoot-grey);
+    border: solid 1px var(--foottrack-grey);
     border-radius: 5px;
     padding: 4px;
     top: 2.5rem;
@@ -18,5 +18,5 @@
 }
 
 .locationsList li:hover {
-    background: var(--traffoot-light-grey);
+    background: var(--foottrack-light-grey);
 }

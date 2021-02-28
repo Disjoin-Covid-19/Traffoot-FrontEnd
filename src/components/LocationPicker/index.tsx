@@ -12,16 +12,16 @@ interface Props {
 }
 
 const LocationPicker: React.FC<Props> = ({ locationSearch, setLocationSearch, onSelect }) => {
-    const { places,clearPlaces, findLocations,  } = useGeoLocations();
+    const { places, clearPlaces, findLocations,  } = useGeoLocations();
 
     useEffect(() => {
         findLocations(locationSearch);
-    }, [locationSearch]);
+    }, [locationSearch, findLocations]);
 
     const onSelectPlace = useCallback((p : IOSMSearchPlace) => {
         onSelect(p);
         clearPlaces();
-    }, [])
+    }, [onSelect, clearPlaces])
 
     return (
         <div className={style.wrapper}>

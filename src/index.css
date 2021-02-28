@@ -8,11 +8,11 @@
     --font-size-lg: 2rem;
     --font-size-xlg: 3.6rem;
 
-    --traffoot-grey: #9D9D9C;
-    --traffoot-light-grey: #F7F7F7;
-    --traffoot-white: #d5d5d4;
-    --traffoot-black: #0D0C11;
-    --traffoot-primary-red: #ea3659;
+    --foottrack-grey: #9D9D9C;
+    --foottrack-light-grey: #F7F7F7;
+    --foottrack-white: #d5d5d4;
+    --foottrack-black: #0D0C11;
+    --foottrack-primary-red: #ea3659;
 
     /* --breakpoint-mobile: 600px;
     --breakpoint-tablet: 768px;

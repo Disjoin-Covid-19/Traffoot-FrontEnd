@@ -1,13 +1,18 @@
-// import React from 'react';
-// import { Route } from 'react-router-dom';
-// import useAuth from '../hooks/context/useAuth';
+import React from 'react';
+import { useAuth } from "contexts/Auth/auth.hooks";
+import { Route, RouteProps } from "react-router-dom";
 
-const PrivateRoute = () => {
-    // const { user } = useAuth();
+interface Props extends RouteProps {
 
-    // Show the component only when the user is logged in
-    // Otherwise, redirect the user to homepage
-    // In case of an event, though, redirect them to /e/:id page
+}
+
+const PrivateRoute: React.FC<Props> = (props) => {
+    const { token } = useAuth();
+    
+    if (token) return (
+        <Route {...props} />
+    )
+
     return (
         null
     );
