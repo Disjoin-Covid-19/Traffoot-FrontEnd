@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { TileLayer, Marker, Popup, Circle, useMap } from 'react-leaflet';
-import data from '../map.storedata.json';
 import { useMapContext } from '../map.hooks';
 
 interface Props { }
@@ -8,7 +7,7 @@ interface Props { }
 const MapInner: React.FC<Props> = (props) => {
 
     const map = useMap();
-    const { center, rangeInMiles } = useMapContext();
+    const { center, rangeInMiles, stores } = useMapContext();
 
     useEffect(() => {
         if (center) {
@@ -32,13 +31,13 @@ const MapInner: React.FC<Props> = (props) => {
                     radius={rangeInMiles * 1609} // leaflet does radius in meters
                 />
             )}
-            {data.map(d =>
-                <Marker position={[d.latitude, d.longitude]}>
-                    <Popup>
-                        {d.storeName}
-                    </Popup>
+            {stores?.map(d =>null
+                // <Marker position={[d.latitude, d.longitude]}>
+                //     <Popup>
+                //         {d.storeName}
+                //     </Popup>
 
-                </Marker>
+                // </Marker>
             )}
         </>
     )

@@ -3,6 +3,7 @@ import HomeHeader from './HomeHeader';
 import style from './home.module.css';
 import Button from 'components/Button';
 import { useAuth } from 'contexts/Auth/auth.hooks';
+import { Link } from 'react-router-dom';
 
 const Home : React.FC<{}> = () => {
     const { username } = useAuth();
@@ -24,7 +25,9 @@ const Home : React.FC<{}> = () => {
                 </p>
                 <div className={style.buttons}>
                     {!username && <Button className={style.signUpButton} large styling="black"> Sign Up </Button>}
+                    <Link to='/map'>
                     <Button large styling="primary"> Find Store </Button>
+                    </Link>
                 </div>
             </div>
         </main>
