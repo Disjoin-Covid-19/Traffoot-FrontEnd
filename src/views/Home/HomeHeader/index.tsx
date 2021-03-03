@@ -1,7 +1,6 @@
 import React from 'react';
 import style from './homeheader.module.css';
 import logoImage from 'assets/image-product-logo-bg-black.svg';
-import Button from 'components/Button';
 import LoginRegisterPopup from 'components/LoginRegisterPopup';
 import { useAuth } from 'contexts/Auth/auth.hooks';
 import { Link } from 'react-router-dom';
