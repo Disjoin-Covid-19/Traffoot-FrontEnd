@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import style from './loginregister.module.css';
 import Button from 'components/Button';
 import SignIn from './SignIn';
+import SignUp from './SignUp';
 import { useTriggered } from './useTriggered';
 
 interface Props { }
@@ -29,7 +30,7 @@ const LoginRegisterPopup: React.FC<Props> = (props) => {
                         {
                             tab === "signin"
                                 ? <SignIn />
-                                : <SignIn />
+                                : <SignUp />
                         }
                     </div>
                 </div>
