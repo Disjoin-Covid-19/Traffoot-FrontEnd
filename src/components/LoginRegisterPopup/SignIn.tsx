@@ -10,7 +10,7 @@ const SignIn: React.FC<Props> = (props) => {
     const [username, setUsername] = useState("abc1@gmail.com");
     const [password, setPassword] = useState("12345");
 
-    const { login, loggingIn } = useAuth();
+    const { login, authLoading: loggingIn } = useAuth();
 
     const onSubmit = useCallback((e:FormEvent) => {
         e.preventDefault();
@@ -21,11 +21,13 @@ const SignIn: React.FC<Props> = (props) => {
         <form className={style.form} onSubmit={onSubmit}>
             <Input
                 value={username}
+                placeholder="email"
                 onChange={e => setUsername(e.target.value)}
             />
             <Input
                 value={password}
                 onChange={e => setPassword(e.target.value)}
+                placeholder="password"
             />
             <Button styling="primary">
                 {loggingIn ? "Logging in..." : "Log In"}
