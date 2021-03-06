@@ -1,9 +1,10 @@
 import React from 'react';
 import style from './mapsidebar.module.css';
-import productLogo from 'assets/image-product-logo.png';
+import productLogo from 'assets/image-product-logo-bg-white.svg';
 import Input from 'components/Input';
 import { useMapContext } from '../map.hooks';
 import LocationPicker from 'components/LocationPicker';
+import { Link } from 'react-router-dom';
 
 interface Props { }
 
@@ -20,7 +21,9 @@ const MapSideBar: React.FC<Props> = (props) => {
     return (
         <div className={style.container}>
             <header className={style.header}>
-                <img className={style.logo} src={productLogo} alt="FootTrack" />
+                <Link to="/">
+                    <img className={style.logo} src={productLogo} alt="FootTrack" />
+                </Link>
                 <p>
                     <span>Loren ipsum dolor sit</span>
                     <br />

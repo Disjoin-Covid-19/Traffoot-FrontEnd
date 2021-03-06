@@ -15,9 +15,9 @@
 }
 
 .black {
-    background: var(--traffoot-black);
-    color: var(--traffoot-white);
-    border: solid var(--traffoot-white) 1px;
+    background: var(--foottrack-black);
+    color: var(--foottrack-white);
+    border: solid var(--foottrack-white) 1px;
 }
 
 .blank {
@@ -28,6 +28,6 @@
 }
 
 .primary {
-    background: var(--traffoot-primary-red);
+    background: var(--foottrack-primary-red);
     color: #fff;
 }

@@ -18,7 +18,7 @@ const Map: React.FC<Props> = () => {
             <div className={style.container}>
                 <MapSideBar />
 
-                <MapContainer className={style.map} center={[47.6062, -122.3321]} zoom={10} scrollWheelZoom={true}>
+                <MapContainer className={style.map} center={[54.5412717, 18.0936055]} zoom={10} scrollWheelZoom={true}>
                     <MapInner />
                 </MapContainer>
 

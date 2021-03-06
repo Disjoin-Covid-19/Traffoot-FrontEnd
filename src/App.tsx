@@ -5,26 +5,32 @@ import Map from "./views/Map";
 
 import { Route } from 'react-router-dom';
 import PrivateRoute from "./components/PrivateRoute";
+import AuthProvider from "contexts/Auth/auth.provider";
 
-const PUBLIC_TYPE_ROUTE = 'public';
+enum RouteType {
+    PUBLIC = 'PUBLIC',
+    PRIVATE = 'PRIVATE'
+}
 
 const routes = [
-    { path: '/', component: Home, exact: true, type: PUBLIC_TYPE_ROUTE },
-    { path: '/map', component: Map, exact: false, type: PUBLIC_TYPE_ROUTE },
+    { path: '/', component: Home, exact: true, type: RouteType.PUBLIC },
+    // TODO: lazy loading non home components
+    { path: '/map', component: Map, exact: false, type: RouteType.PUBLIC },
 ];
 
-function App() {
+const App : React.FC<{}> = () => {
     return (
-        <BrowserRouter>
-            <Switch>
-                {routes.map(({ type, ...props }) =>
-                    type === PUBLIC_TYPE_ROUTE
-                        ? <Route key={props.path} {...props} />
-                        : <PrivateRoute key={props.path} {...props} />
-                )}
-            </Switch>
-
-        </BrowserRouter>
+        <AuthProvider>
+            <BrowserRouter>
+                <Switch>
+                    {routes.map(({ type, ...props }) =>
+                        type === RouteType.PUBLIC
+                            ? <Route key={props.path} {...props} />
+                            : <PrivateRoute key={props.path} {...props} />
+                    )}
+                </Switch>
+            </BrowserRouter>
+        </AuthProvider>
     );
 }
 
