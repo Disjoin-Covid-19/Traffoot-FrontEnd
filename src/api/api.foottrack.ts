@@ -4,7 +4,21 @@ export const FTAxios = Axios.create({
     baseURL: "https://sample-disjoin1.herokuapp.com/api"
 })
 
-export interface IGeoStore {}
+export interface IGeoStore {
+    _id:          { $oid: string };
+    sid:          number;
+    sName:        string;
+    username:     string;
+    password:     string;
+    streetName:   string;
+    city:         string;
+    state:        string;
+    zipcode:      string;
+    isActive:     boolean;
+    Latitude:     number;
+    Longitude:    number;
+    timestampUTC: number;
+}
 export const getStores = async (center: [number, number], radius: number) => {
     const response = await FTAxios({
         url: '/geofence_stores',

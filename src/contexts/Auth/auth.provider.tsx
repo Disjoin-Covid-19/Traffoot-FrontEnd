@@ -25,7 +25,7 @@ const AuthProvider: React.FC<Props> = ({ children }) => {
         setAuthLoading(true);
 
         try {
-            const response = await FootTrackAPI.register(username, password);
+            await FootTrackAPI.register(username, password);
             
             
         } catch (error) {

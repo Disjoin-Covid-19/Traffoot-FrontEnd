@@ -7,12 +7,14 @@ import 'leaflet/dist/leaflet.css'
 
 import { MapContainer } from 'react-leaflet'
 import MapInner from './MapInner';
+import useTitle from 'hooks/useTitle';
 interface Props {
 
 }
 
 const Map: React.FC<Props> = () => {
-
+    useTitle("Search for stores");
+    
     return (
         <MapProvider>
             <div className={style.container}>

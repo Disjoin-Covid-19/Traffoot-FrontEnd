@@ -5,6 +5,7 @@ import Input from 'components/Input';
 import { useMapContext } from '../map.hooks';
 import LocationPicker from 'components/LocationPicker';
 import { Link } from 'react-router-dom';
+import SidebarStores from './SidebarStores';
 
 interface Props { }
 
@@ -15,14 +16,18 @@ const MapSideBar: React.FC<Props> = (props) => {
         setLocation,
         rangeInMiles,
         setRangeInMiles,
-        setCenter
+        setCenter,
+        getMapStores,
+        stores
     } = useMapContext();
 
     return (
         <div className={style.container}>
             <header className={style.header}>
                 <Link to="/">
-                    <img className={style.logo} src={productLogo} alt="FootTrack" />
+                    <h1>
+                        <img className={style.logo} src={productLogo} alt="FootTrack" />
+                    </h1>
                 </Link>
                 <p>
                     <span>Loren ipsum dolor sit</span>
@@ -35,11 +40,13 @@ const MapSideBar: React.FC<Props> = (props) => {
                 <div>
                     <label htmlFor="search">
                         Where are you searching?
-                </label>
+                    </label>
                     <LocationPicker
                         locationSearch={location}
                         setLocationSearch={setLocation}
-                        onSelect={(p) => setCenter([Number(p.lat), Number(p.lon)])}
+                        onSelect={(p) => {
+                            getMapStores([Number(-34.6143064), Number(-58.738932)])
+                        }}
                     />
                 </div>
 
@@ -50,11 +57,13 @@ const MapSideBar: React.FC<Props> = (props) => {
                     <Input
                         type="range"
                         min="0"
-                        max="10"
+                        max="1000"
                         value={rangeInMiles}
                         onChange={e => setRangeInMiles(Number(e.target.value))}
                     />
                 </div>
+
+                {stores && <SidebarStores />}
 
 
             </div>

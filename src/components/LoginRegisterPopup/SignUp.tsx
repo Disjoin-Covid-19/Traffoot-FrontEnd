@@ -17,7 +17,7 @@ const SignUp: React.FC<Props> = (props) => {
     const onSubmit = useCallback((e: FormEvent) => {
         e.preventDefault();
         register(username, password);
-    }, []);
+    }, [username, password, register]);
 
     return (
         <form className={style.form} onSubmit={onSubmit}>

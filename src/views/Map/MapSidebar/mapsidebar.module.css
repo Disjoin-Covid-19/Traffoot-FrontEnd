@@ -1,6 +1,7 @@
 .container {
     width: 100%;
     padding: 1rem;
+    overflow: auto;
 }
 .header {
     display: none;

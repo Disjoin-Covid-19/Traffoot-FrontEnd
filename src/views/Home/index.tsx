@@ -4,9 +4,12 @@ import style from './home.module.css';
 import Button from 'components/Button';
 import { useAuth } from 'contexts/Auth/auth.hooks';
 import { Link } from 'react-router-dom';
+import useTitle from 'hooks/useTitle';
 
 const Home : React.FC<{}> = () => {
     const { username } = useAuth();
+
+    useTitle("Foot traffic control for a safer world")
 
     return (
         <main className={style.main}>

@@ -12,6 +12,7 @@
     "react-leaflet": "^3.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "react-spinners": "^0.10.6",
     "typeface-montserrat": "^1.1.13",
     "typeface-poppins": "^1.1.13"
   },

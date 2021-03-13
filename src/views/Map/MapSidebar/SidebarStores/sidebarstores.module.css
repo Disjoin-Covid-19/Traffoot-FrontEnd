@@ -1,0 +1,57 @@
+.list {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.listItem {
+    display: flex;
+}
+
+.storeImage {
+height: 100%;
+margin-right: .25rem;
+width: 10rem;
+cursor: pointer;
+}
+
+.listItemBody{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.listItemBody > h2 {
+    font-size: var(--font-size-md);
+    padding: 0;
+    margin: 0;
+
+
+}
+
+.listItemBody > h3 {
+    font-size: var(--font-size-sm);
+    color: var(--foottrack-grey);
+    padding: 0;
+    margin: 0;
+
+}
+
+.listItemBody > footer {
+    display: flex;
+    font-size: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.traffic {
+    font-size: 1.75rem;
+    display: flex;
+}
+
+
+
+
+
+
+

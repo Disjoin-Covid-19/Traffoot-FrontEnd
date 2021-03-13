@@ -11,6 +11,7 @@ interface IMapContextActions {
   setCenter(v: IMapContextState["center"]): void;
   setLocation(v: IMapContextState["location"]): void;
   setRangeInMiles(v: IMapContextState["rangeInMiles"]): void;
+  getMapStores(c: IMapContextState["center"], r?: number):void;
 }
 
 const MapContext = React.createContext<IMapContextState & IMapContextActions>({} as any);
