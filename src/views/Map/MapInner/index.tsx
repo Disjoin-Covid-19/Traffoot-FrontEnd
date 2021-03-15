@@ -21,7 +21,7 @@ const MapInner: React.FC<Props> = (props) => {
     useEffect(() => {
         if (center) {
             map.panTo(center);
-            map.setZoom(12)
+            map.setZoom(10)
         }
     }, [map, center]);
 

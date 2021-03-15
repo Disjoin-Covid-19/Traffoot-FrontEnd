@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import MapContext from './map.context';
 import { useGeofenceStores } from './map.hooks';
 
@@ -12,14 +12,16 @@ const MapProvider: React.FC<Props> = ({ children }) => {
     const {
         getStores,
         stores,
+        storesLoading
     } = useGeofenceStores();
 
     const getMapStores = useCallback((c?: [number, number], r?: number) => {
-        if (c) setCenter(c);
         if (r) setRangeInMiles(r);
-        
-        if (c) return getStores(c, r ?? rangeInMiles);
-        if (center) return getStores(center, r ?? rangeInMiles)
+        if (c){ 
+            setCenter(c);
+            return getStores(c, r ?? rangeInMiles);
+        }
+        if (center) return getStores(center, r ?? rangeInMiles);
         
     }, [center, rangeInMiles, getStores])
 
@@ -29,6 +31,7 @@ const MapProvider: React.FC<Props> = ({ children }) => {
             location,
             rangeInMiles,
             stores,
+            storesLoading,
             setCenter,
             setLocation,
             setRangeInMiles,

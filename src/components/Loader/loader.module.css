@@ -1,0 +1,8 @@
+.loader {
+    display: flex;
+    height: 100%;
+}
+
+.loader > span {
+    margin: auto;
+}

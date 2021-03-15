@@ -16,9 +16,7 @@ const MapSideBar: React.FC<Props> = (props) => {
         setLocation,
         rangeInMiles,
         setRangeInMiles,
-        setCenter,
         getMapStores,
-        stores
     } = useMapContext();
 
     return (
@@ -57,13 +55,12 @@ const MapSideBar: React.FC<Props> = (props) => {
                     <Input
                         type="range"
                         min="0"
-                        max="1000"
+                        max="100"
                         value={rangeInMiles}
                         onChange={e => setRangeInMiles(Number(e.target.value))}
                     />
                 </div>
-
-                {stores && <SidebarStores />}
+                <SidebarStores />
 
 
             </div>

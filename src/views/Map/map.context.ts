@@ -5,6 +5,7 @@ interface IMapContextState {
   location: string; // location entered by user to be looked up
   rangeInMiles: number; // radius
   stores: IGeoStore[] | undefined; // stores
+  storesLoading: boolean;
 }
 
 interface IMapContextActions {

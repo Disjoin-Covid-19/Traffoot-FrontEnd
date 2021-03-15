@@ -12,24 +12,24 @@ export const useMapContext = () => {
 
 export const useGeofenceStores = () => {
     const [stores, setStores] = useState<IGeoStore[] | undefined>();
-    const [loading, setLoading] = useState(false);
+    const [storesLoading, setStoresLoading] = useState(false);
 
     const getStores = useCallback(async (center: [number, number], radius: number) => {
-        setLoading(true);
+        setStoresLoading(true);
         const response = await FootTrackAPI.getStores(center, radius);
 
         if (response.status === 200) {
             setStores(response.data);
         };
 
-        setLoading(false);
+        setStoresLoading(false);
 
-    }, [setLoading, setStores])
+    }, [setStoresLoading, setStores])
 
     return {
         getStores,
         stores,
-        loading
+        storesLoading
     }
 
 }
