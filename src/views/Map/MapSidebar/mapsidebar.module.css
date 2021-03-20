@@ -6,6 +6,9 @@
 .header {
     display: none;
 }
+.header p {
+    margin: 0;
+}
 .form {
     display: flex;
     flex-direction: column;

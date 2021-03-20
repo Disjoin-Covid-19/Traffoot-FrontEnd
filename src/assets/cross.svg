@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Icon-Cross</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M18.335646,17 L22.3900453,21.0543993 C22.7588738,21.4232278 22.7588738,22.0212168 22.3900453,22.3900453 C22.0212168,22.7588738 21.4232278,22.7588738 21.0543993,22.3900453 L17,18.335646 L12.9456007,22.3900453 C12.5767722,22.7588738 11.9787832,22.7588738 11.6099547,22.3900453 C11.2411262,22.0212168 11.2411262,21.4232278 11.6099547,21.0543993 L15.664354,17 L11.6099547,12.9456007 C11.2411262,12.5767722 11.2411262,11.9787832 11.6099547,11.6099547 C11.9787832,11.2411262 12.5767722,11.2411262 12.9456007,11.6099547 L17,15.664354 L21.0543993,11.6099547 C21.4232278,11.2411262 22.0212168,11.2411262 22.3900453,11.6099547 C22.7588738,11.9787832 22.7588738,12.5767722 22.3900453,12.9456007 L18.335646,17 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Component-/-Message-/-Header-/-145px" transform="translate(-330.000000, -18.000000)">
+            <g id="Header">
+                <g id="Graphic-/-Icon-/-Cross-/-Default" transform="translate(319.000000, 7.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Icon" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

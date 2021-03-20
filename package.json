@@ -12,6 +12,7 @@
     "react-leaflet": "^3.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "react-scroll": "^1.8.2",
     "react-spinners": "^0.10.6",
     "typeface-montserrat": "^1.1.13",
     "typeface-poppins": "^1.1.13"
@@ -41,7 +42,9 @@
     ]
   },
   "devDependencies": {
-    "typescript": "4.0.5",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
     "@types/classnames": "^2.2.11",
     "@types/jest": "^26.0.20",
     "@types/leaflet": "^1.5.23",
@@ -49,8 +52,7 @@
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
     "@types/react-router-dom": "^5.1.7",
-    "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10"
+    "@types/react-scroll": "^1.8.2",
+    "typescript": "4.0.5"
   }
 }

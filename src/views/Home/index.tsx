@@ -1,38 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Element, scroller, Events } from 'react-scroll';
 import HomeHeader from './HomeHeader';
 import style from './home.module.css';
-import Button from 'components/Button';
-import { useAuth } from 'contexts/Auth/auth.hooks';
-import { Link } from 'react-router-dom';
 import useTitle from 'hooks/useTitle';
+import HomeFrame0 from './HomeFrame0';
+import HomeFrame1 from './HomeFrame1';
+import HomeFrame2 from './HomeFrame2';
+import useScrollDirection from './useScrollDirection';
 
-const Home : React.FC<{}> = () => {
-    const { username } = useAuth();
+const Home: React.FC<{}> = () => {
 
     useTitle("Foot traffic control for a safer world")
-
+    useScrollDirection({
+        frameLimit: 2,
+        onScroll: (f) => {
+            console.log(f);
+            
+            scroller.scrollTo('frame'+f, {duration: 300, smooth: true  })
+        },
+    });
     return (
         <main className={style.main}>
             <HomeHeader />
-
-            <div className={style.content}>
-                <h1 className={style.slogan}>
-                    <span>Foot traffic control</span>
-                    <br/>
-                    <span>for a safer world</span>
-                </h1>
-                <p className={style.description}>
-                    <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</span>
-                    <br/>
-                    <span>labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores</span>
-                </p>
-                <div className={style.buttons}>
-                    {!username && <Button className={style.signUpButton} large styling="black"> Sign Up </Button>}
-                    <Link to='/map'>
-                    <Button large styling="primary"> Find Store </Button>
-                    </Link>
-                </div>
-            </div>
+            <Element name="frame0">
+                <HomeFrame0 />
+            </Element>
+            <Element name="frame1">
+                <HomeFrame1 />
+            </Element>
+            <Element name="frame2">
+                <HomeFrame2 />
+            </Element>
         </main>
     )
 }

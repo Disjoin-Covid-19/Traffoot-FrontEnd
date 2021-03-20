@@ -1,9 +1,11 @@
 .header {
     display: flex;
+    position: fixed;
     align-items: center;
     justify-content: space-between;
     padding: 3rem 5rem;
-    background-image: url("assets/image-background-home.png");
+    background: var(--foottrack-black);
+    /* background-image: url("assets/image-background-home.png"); */
     background-size: cover;
     height: 7vh;
     width: 100vw;

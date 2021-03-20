@@ -4,6 +4,7 @@
     padding: 8px 16px;
     background-color: var(--foottrack-light-grey);
     height: 2rem;
+    width: 100%;
 }
 
 input[type=range] {
