@@ -9,6 +9,7 @@ interface IAuthState {
 interface IAuthActions {
     setToken(t: string):void;
     login(username: string, password: string): void;
+    logout(): void;
     register(username: string, password: string): void;
 }
 

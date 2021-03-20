@@ -4,6 +4,7 @@ import logoImage from 'assets/image-product-logo-bg-black.svg';
 import LoginRegisterPopup from 'components/LoginRegisterPopup';
 import { useAuth } from 'contexts/Auth/auth.hooks';
 import { Link } from 'react-router-dom';
+import UserPopup from 'components/UserPopup';
 
 const HomeHeader = () => {
 
@@ -15,7 +16,7 @@ const HomeHeader = () => {
 
             <div className={style.accountControls}>
                 <Link to="/about" className={style.aboutUs}>About us</Link>
-                {username ? <span>{username}</span> : <LoginRegisterPopup />}
+                {username ? <UserPopup /> : <LoginRegisterPopup />}
             </div>
         </header>
     )

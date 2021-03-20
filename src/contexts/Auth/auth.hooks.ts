@@ -15,11 +15,11 @@ export const useSerializedAuth = () => {
             return {
                 storedUsername: localStorage.getItem('auth_username') ?? undefined,
                 storedToken: localStorage.getItem('auth_token') ?? undefined
-            }
-        }        
-        localStorage.removeItem('auth_timestamp')
-        localStorage.removeItem('auth_username')
-        localStorage.removeItem('auth_token')
+            };
+        }       
+        localStorage.removeItem('auth_timestamp');
+        localStorage.removeItem('auth_username');
+        localStorage.removeItem('auth_token');
 
         return {
             storedUsername: undefined,
@@ -27,16 +27,23 @@ export const useSerializedAuth = () => {
         }
     }, []);
 
-    const serializeAuth = useCallback((username, token) => {
-        localStorage.setItem('auth_timestamp', Date.now().toString())
+    const serializeAuth = useCallback((username: string, token: string) => {
+        localStorage.setItem('auth_timestamp', Date.now().toString());
         localStorage.setItem('auth_token', token);
         localStorage.setItem('auth_username', username)
     }, []);
 
+    const clearSerialisedAuth = useCallback(() => {
+        localStorage.removeItem('auth_timestamp');
+        localStorage.removeItem('auth_token');
+        localStorage.removeItem('auth_username');
+    }, [])
+
     return {
         storedUsername,
         storedToken,
-        serializeAuth
+        serializeAuth,
+        clearSerialisedAuth
     }
 
 }

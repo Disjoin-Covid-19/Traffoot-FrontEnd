@@ -11,6 +11,7 @@ const AuthProvider: React.FC<Props> = ({ children }) => {
         storedUsername,
         storedToken,
         serializeAuth,
+        clearSerialisedAuth
     } = useSerializedAuth();
 
     const [username, setUsername] = useState(storedUsername);
@@ -26,12 +27,17 @@ const AuthProvider: React.FC<Props> = ({ children }) => {
 
         try {
             await FootTrackAPI.register(username, password);
-            
-            
         } catch (error) {
             console.log('error registering', error);
         }
-    }, [])
+    }, []);
+
+    const logout = useCallback(() => {
+        // TODO: hit an endpoint to invalidate the token
+        clearSerialisedAuth();
+        setUsername(undefined);
+        setToken(undefined);
+    }, [clearSerialisedAuth])
 
     const login = useCallback(async (username: string, password: string) => {
         setAuthLoading(true);
@@ -58,7 +64,8 @@ const AuthProvider: React.FC<Props> = ({ children }) => {
             username,
             register,
             setToken,
-            login
+            login,
+            logout
         }}>
             {children}
         </AuthContext.Provider>

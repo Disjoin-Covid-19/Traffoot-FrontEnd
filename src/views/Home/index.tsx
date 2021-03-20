@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Element, scroller, Events } from 'react-scroll';
+import React from 'react';
+import { Element, scroller } from 'react-scroll';
 import HomeHeader from './HomeHeader';
 import style from './home.module.css';
 import useTitle from 'hooks/useTitle';
@@ -14,9 +14,7 @@ const Home: React.FC<{}> = () => {
     useScrollDirection({
         frameLimit: 2,
         onScroll: (f) => {
-            console.log(f);
-            
-            scroller.scrollTo('frame'+f, {duration: 300, smooth: true  })
+            scroller.scrollTo('frame'+f, {duration: 300, smooth: true, })
         },
     });
     return (

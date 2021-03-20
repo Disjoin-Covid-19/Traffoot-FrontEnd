@@ -1,0 +1,18 @@
+.container {
+    position: relative;
+}
+
+.username {
+    color: #fff;
+}
+
+.popup {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    color: black;
+    padding: .5rem;
+    right: .5rem;
+    top: 3rem;
+}
