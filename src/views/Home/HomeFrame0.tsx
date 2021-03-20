@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './home.module.css';
-import storeImage from 'assets/image-home-frame-1-store.png';
 import { useAuth } from 'contexts/Auth/auth.hooks';
 import Button from 'components/Button';
 import { Link } from 'react-router-dom';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import style from './userpopup.module.scss';
+import style from './userpopup.module.css';
 import { useAuth } from 'contexts/Auth/auth.hooks';
 import Button from 'components/Button';
 
