@@ -6,6 +6,8 @@ import { useMapContext } from '../map.hooks';
 import LocationPicker from 'components/LocationPicker';
 import { Link } from 'react-router-dom';
 import SidebarStores from './SidebarStores';
+import useGeoLocation from 'hooks/useGeoLocation';
+import Button from 'components/Button';
 
 interface Props { }
 
@@ -19,14 +21,22 @@ const MapSideBar: React.FC<Props> = (props) => {
         getMapStores,
     } = useMapContext();
 
+    const {
+        locationSupported,
+        getUserPosition
+    } = useGeoLocation(getMapStores);
+
     return (
         <div className={style.container}>
             <header className={style.header}>
-                <Link to="/">
-                    <h1>
-                        <img className={style.logo} src={productLogo} alt="FootTrack" />
-                    </h1>
-                </Link>
+                <div className="row middle between">
+                    <Link to="/">
+                        <h1>
+                            <img className={style.logo} src={productLogo} alt="FootTrack" />
+                        </h1>
+                    </Link>
+                    {locationSupported && <Button onClick={getUserPosition}>Use my location</Button>}
+                </div>
                 <p>
                     <span>Loren ipsum dolor sit</span>
                     <br />

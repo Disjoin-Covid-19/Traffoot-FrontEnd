@@ -47,3 +47,13 @@ html,
     box-sizing: border-box;
 }
 
+.row {
+    display: flex;
+    width: 100%;
+}
+.row.between {
+    justify-content: space-between;
+}
+.row.middle {
+    align-items: center;
+}
